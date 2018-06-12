@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A48BA756-4F58-4B67-B62A-2559CCB48579}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DavinciCode</RootNamespace>
+    <AssemblyName>DavinciCode</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Kinect, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Assemblies\Microsoft.Kinect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Kinect.Wpf.Controls, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Redist\WpfControls\Microsoft.Kinect.Wpf.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Class\Cheese.cs" />
+    <Compile Include="Class\DavinciCodePlay.cs" />
+    <Compile Include="Class\MenuButton.cs" />
+    <Compile Include="PlayWindow\LogoMenu.xaml.cs">
+      <DependentUpon>LogoMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlayWindow\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlayWindow\PlayGame.xaml.cs">
+      <DependentUpon>PlayGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\CheeseShowBox.xaml.cs">
+      <DependentUpon>CheeseShowBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\Chess.xaml.cs">
+      <DependentUpon>Chess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\Credit.xaml.cs">
+      <DependentUpon>Credit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\EscBox.xaml.cs">
+      <DependentUpon>EscBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\GameTable.xaml.cs">
+      <DependentUpon>GameTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\GuessBox.xaml.cs">
+      <DependentUpon>GuessBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\GuessContinueBox.xaml.cs">
+      <DependentUpon>GuessContinueBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\HelpWindow.xaml.cs">
+      <DependentUpon>HelpWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\PlayBox.xaml.cs">
+      <DependentUpon>PlayBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\PlayerLoseShow.xaml.cs">
+      <DependentUpon>PlayerLoseShow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\PlayerWinShow.xaml.cs">
+      <DependentUpon>PlayerWinShow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\PutCheese.xaml.cs">
+      <DependentUpon>PutCheese.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\SinglePlay.xaml.cs">
+      <DependentUpon>SinglePlay.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PlayWindow\LogoMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayWindow\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayWindow\PlayGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UControl\CheeseShowBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UControl\Chess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UControl\Credit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UControl\EscBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UControl\GameTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UControl\GuessBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UControl\GuessContinueBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UControl\HelpWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UControl\PlayBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UControl\PlayerLoseShow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UControl\PlayerWinShow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UControl\PutCheese.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UControl\SinglePlay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\anniu.png" />
+    <Resource Include="Images\baida.png" />
+    <Resource Include="Images\BM.jpg" />
+    <Resource Include="Images\Bottom.png" />
+    <Resource Include="Images\Credits.png" />
+    <Resource Include="Images\Help.png" />
+    <Resource Include="Images\Icon_Black.png" />
+    <Resource Include="Images\Icon_Guesst.png" />
+    <Resource Include="Images\Icon_Light.png" />
+    <Resource Include="Images\Icon_LightLong.png" />
+    <Resource Include="Images\Icon_Right.png" />
+    <Resource Include="Images\Icon_White.png" />
+    <Resource Include="Images\LB.png" />
+    <Resource Include="Images\Left.png" />
+    <Resource Include="Images\Light.png" />
+    <Resource Include="Images\LM.jpg" />
+    <Resource Include="Images\Logo.png" />
+    <Resource Include="Images\long.png" />
+    <Resource Include="Images\lose.png" />
+    <Resource Include="Images\LT.png" />
+    <Resource Include="Images\MM.jpg" />
+    <Resource Include="Images\Multi.png" />
+    <Resource Include="Images\Options.png" />
+    <Resource Include="Images\point.png" />
+    <Resource Include="Images\Quit.png" />
+    <Resource Include="Images\RB.png" />
+    <Resource Include="Images\Right.png" />
+    <Resource Include="Images\RM.jpg" />
+    <Resource Include="Images\RT.png" />
+    <Resource Include="Images\Sign.png" />
+    <Resource Include="Images\Single.png" />
+    <Resource Include="Images\TM.jpg" />
+    <Resource Include="Images\Top.png" />
+    <Resource Include="Images\win.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

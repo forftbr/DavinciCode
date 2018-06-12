@@ -1,0 +1,24 @@
+﻿<Page x:Class="DavinciCode.PlayWindow.LogoMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:k="http://schemas.microsoft.com/kinect/2014"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+	Title="LogoMenu" Loaded="Page_Loaded" Background="Black">
+
+    <Grid>
+        <k:KinectRegion x:Name="kinectRegion" >
+        <Grid>
+            <Canvas Name="MainCanvas" Height="600" Width="800">
+            <Grid Name="MainGrid" Height="600" Width="800"/>
+
+        </Canvas>
+        <Grid Name="HelpWindow" Height="600" Width="800"></Grid>
+    </Grid>
+    </k:KinectRegion>
+
+    <k:KinectUserViewer Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="349,10,330,0" />
+    </Grid>
+</Page>

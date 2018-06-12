@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="DavinciCode.UControl.PlayerWinShow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Width="800">
+    <Viewbox>
+        <Grid>
+            <Image  HorizontalAlignment="Left"  Name="image1" Stretch="Fill" VerticalAlignment="Top"  Source="../Images/win.png" />
+            <TextBlock Height="39" HorizontalAlignment="Left" Margin="417,104,0,0" Name="textBlock1" Text="Congratulations" VerticalAlignment="Top" FontSize="30" Width="235" Foreground="White" FontFamily="Microsoft YaHei" >
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="2"></DropShadowEffect>
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBlock FontFamily="Microsoft YaHei" FontSize="30" Foreground="White" Height="39" HorizontalAlignment="Left" Margin="471,151,0,0" Name="textBlock2" Text="You Win" VerticalAlignment="Top" Width="126" >
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="2"></DropShadowEffect>
+                </TextBlock.Effect>
+            </TextBlock>
+        </Grid>
+    </Viewbox>
+</UserControl>

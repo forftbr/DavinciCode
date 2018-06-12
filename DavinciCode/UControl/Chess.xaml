@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="DavinciCode.UControl.Chess"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="180" d:DesignWidth="180" >
+
+    <UserControl.Resources>
+        <ControlTemplate x:Key="BZTemplate" TargetType="{x:Type Button}">
+            <Rectangle Fill="Red" HorizontalAlignment="Left" Stroke="{x:Null}" Width="20"/>
+        </ControlTemplate>
+    </UserControl.Resources>
+
+    <Viewbox>
+        <Grid>
+
+            <Image x:Name="ShowImage" Source="../Images/Icon_Black.png" Stretch="Fill" Height="150" Width="150">
+                <Image.Effect>
+                    <DropShadowEffect></DropShadowEffect>
+                </Image.Effect>
+            </Image>
+            <Image x:Name="IconGuess" Source="../Images/Icon_Guesst.png" Height="180" Width="180" Opacity="0"/>
+            <Image x:Name="IconRight" Source="../Images/Icon_Right.png" Height="180" Width="180" Opacity="0"/>
+            <Image x:Name="IconLight" Source="../Images/Icon_Light.png" Opacity="0" Height="180" Width="180" SnapsToDevicePixels="False"></Image>
+            <TextBlock Name="Number" Text="1" Height="80" FontSize="60" FontFamily="Microsoft YaHei" Opacity="0" Margin="54,50,52,50" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">
+
+            </TextBlock>
+            <Button Margin="80,80,80,80" Opacity="0.01" Template="{DynamicResource BZTemplate}" Name="KButton" Click="Button_Click"/>
+
+        </Grid>
+    </Viewbox>
+</UserControl>

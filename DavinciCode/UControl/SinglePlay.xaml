@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="DavinciCode.UControl.SinglePlay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:my="clr-namespace:DavinciCode.UControl" Background="Black" Loaded="UserControl_Loaded">
+
+    <Grid>
+        <Canvas Name="BackSet" />
+        <my:GameTable  x:Name="GameTableAtHere" VerticalAlignment="Top" />
+        <Canvas Name="CheeseSet" />
+        <Canvas Name="PlayerOneBoxSet"/>
+        <Canvas Name="PlayerTwoBoxSet" FlowDirection="RightToLeft"/>
+        <Canvas Name="GuessBoxSet" />
+        <Canvas Name="ContinueBoxSet" />
+
+        <Grid Name="EscBoxSet">
+            <my:EscBox x:Name="escBox1" Height="178" Width="294" MouseEnter="escBox1_MouseEnter" MouseLeave="escBox1_MouseLeave" Margin="-250,155,740,227" Opacity="0"/>
+
+        </Grid>
+        <Canvas Name="WinOrLoseBoxSet" />
+    </Grid>
+</UserControl>
